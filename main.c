@@ -19,9 +19,7 @@ static uint8_t CanRxMessage_For_Usart[33];
 
  
  /******************LOOP BUFFER BEGINNING**************************/
- /******************LOOP BUFFER BEGINNING**************************/
- /******************LOOP BUFFER BEGINNING**************************/
- 
+
 /* Check the loop buffer, if it is empty */
 uint32_t isCanRxBufferEmpty(){
 	if(CanRxBufferReadCounter==CanRxBufferWriteCounter){
@@ -69,14 +67,6 @@ Std_Can_Message_Type CanRxBufferRead(void){
 }	
 
  /******************LOOP BUFFER END**************************/
- /******************LOOP BUFFER END**************************/
- /******************LOOP BUFFER END**************************/
-
-
-
-
-
-
 
 /* Setting up a systick interrupt. It counts from a delay value to zero*/
 void SysTick_Handler(void) {   
@@ -90,18 +80,8 @@ void Delay_mS(uint32_t nTime){
 	while (TimingDelay);
  }
 
- 
- 
-
-
-
-
-
 
  /******************INTERRUPTS BEGINNING**************************/
- /******************INTERRUPTS BEGINNING**************************/
- /******************INTERRUPTS BEGINNING**************************/
-
 
 /* Setting up a CAN RX interrupt. Check for FIFO0 not empty event*/	
 void USB_LP_CAN1_RX0_IRQHandler(void) {
@@ -119,14 +99,8 @@ void USB_LP_CAN1_RX0_IRQHandler(void) {
 /* Setting up an USART1 RX interrupt*/		
 void USART1_IRQHandler(void){	
 }
-
 	
  /******************INTERRUPTS END**************************/
- /******************INTERRUPTS END**************************/
- /******************INTERRUPTS END**************************/
-
-
-
 
 /******************TEST AREA**************************/
 /* This function is designed to test CAN transmisson by sending CAN data via USART*/	
